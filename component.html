@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+
+</head>
+<body>
+    
+    <div id="app">
+        <div v-if="show">
+
+            <div v-for="book in books">
+                <h2>{{book.title}}</h2>
+                <p>{{book.author}}</p>
+                <p>{{book.age}}</p>
+
+            </div>
+          
+
+        </div>
+        <button @click="hidedata">
+            <span v-if="show">hide infos</span>
+            <span v-else>show infos</span>
+            <!-- <span v-if="show==false">show infos</span> -->
+           
+        </button>
+        <span v-show="show">variavles for exemple</span>
+        <!-- <button @click="showdata">
+            <span>show infos</span>
+           
+        </button> -->
+       
+        <button v-on:click="age++">increase age</button>
+        <button v-on:click="age--">decrease age</button>
+        <button @click="author = 'emir'">change name of author</button>
+        <button @click="method">display method</button>
+
+
+        <a v-bind:href="url">Transport booking</a>
+
+    </div>
+  
+
+
+               
+            
+        <script src="comp.js"></script>
+</body>
+</html>

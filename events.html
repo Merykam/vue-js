@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2/dist/vue.global.js"></script>
+    <style>
+        .box{
+            background: gray;
+            width: 150px;
+            height: 150px;
+            border: 1px gray solid;
+            margin: 10px;
+          
+
+            
+        }
+        #app{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+                
+            }
+    </style>
+
+</head>
+<body>
+    
+    
+    <div id="app">
+
+        <div class="box" @mouseover="handelevent">mouseover</div>
+        <div class="box" @mouseleave="handelevent">mouseleave</div>
+        <div class="box" @dblclick="handelevent">doubleclick</div>
+        <div class="box" @mousemove="handelevent">move {{x}}-{{y}}</div>
+        
+    </div>
+
+
+  
+
+
+               
+            
+        <script src="event.js"></script>
+</body>
+</html>
